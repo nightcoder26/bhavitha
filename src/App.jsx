@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FaHeart } from "react-icons/fa";
+
 import "./App.css";
 import logo from "./images/logo.jpg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -6,19 +8,33 @@ import card1 from "./images/card1.png";
 import { FaHashnode } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
-import githubIcon from "./images/github.svg";
-import { FaInternetExplorer } from "react-icons/fa";
 import card2 from "./images/card2.png";
 import card3 from "./images/card3.png";
 import Card from "./Card";
 import card4 from "./images/card4.png";
 import { SiGmail } from "react-icons/si";
+import GitHubCalendar from "react-github-calendar";
 
 const App = () => {
   const [showNav, setShowNav] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [initialHeight, setInitialHeight] = useState(window.innerHeight);
+  useEffect(() => {
+    const styleContributions = () => {
+      const rects = document.querySelectorAll(".github-graph rect");
+      rects.forEach((rect) => {
+        const fill = rect.getAttribute("fill");
+        if (fill == "#39d353") rect.setAttribute("fill", "#3e5be7");
+        if (fill == "#26a641") rect.setAttribute("fill", "#2641a6");
+        if (fill == "#006d32") rect.setAttribute("fill", "#00326d");
+        if (fill == "#0e4429") rect.setAttribute("fill", "#0e2944");
+        if (fill == "#161b22") rect.setAttribute("fill", "#161b22");
+      });
+    };
+    //
 
+    styleContributions();
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollTop =
@@ -53,7 +69,9 @@ const App = () => {
             <div className="left-nav">
               <li className="home-link">
                 <a href="#about" className="home-link">
-                  <p className="link-orange">/</p>
+                  <p className="link-orange">
+                    <FaHeart />
+                  </p>
                   <p>Bhavitha</p>
                 </a>
               </li>
@@ -206,6 +224,14 @@ const App = () => {
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div className="github-graph">
+            <h1 className="mb-8 pt-8 text-center">Recent Activity</h1>
+            <GitHubCalendar
+              username="nightcoder26"
+              colorScheme="dark"
+            ></GitHubCalendar>
           </div>
         </div>
       </main>
