@@ -3,7 +3,7 @@ import "./Card.css"; // Import the CSS file
 import { FaGithub } from "react-icons/fa";
 import { BiWorld } from "react-icons/bi";
 
-const Card = ({ image, heading, description, technologies }) => {
+const Card = ({ image, heading, description, technologies, link1, link2 }) => {
   return (
     <div className="card">
       <img src={image} alt="placeholder" className="card-image" />
@@ -17,8 +17,12 @@ const Card = ({ image, heading, description, technologies }) => {
         ))}
       </div>
       <div className="card-icons">
-        <FaGithub className="FaGithub" />
-        <BiWorld />
+        <a href={link1}>
+          <FaGithub />
+        </a>
+        <a href={link2}>
+          <BiWorld />
+        </a>
       </div>
     </div>
   );
