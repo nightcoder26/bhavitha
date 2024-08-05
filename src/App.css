@@ -3,6 +3,9 @@ body {
   background-color: rgb(11, 3, 3);
   color: white;
 }
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
 }
