@@ -1,0 +1,351 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(11, 3, 3);
+  color: white;
+}
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+/* Scrollbar track (part the scrollbar moves along) */
+::-webkit-scrollbar-track {
+  border-radius: 10px; /* Optional: rounded corners for the track */
+}
+
+/* Scrollbar thumb (part that moves) */
+::-webkit-scrollbar-thumb {
+  background: #5080aa; /* Color of the thumb */
+  border-radius: 3px; /* Optional: rounded corners for the thumb */
+}
+
+/* Scrollbar thumb hover state */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.nav {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(0.5rem);
+  background: linear-gradient(
+    180deg,
+    rgba(35, 37, 49, 0.5) 0%,
+    rgba(15, 15, 24, 0.5) 100%
+  );
+  z-index: 100;
+  color: white;
+  border: 0.1px solid rgba(35, 37, 49, 0.5);
+  position: fixed;
+  top: 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav.hidden {
+  transform: translateY(-100%);
+}
+
+.nav.visible {
+  transform: translateY(0);
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  font-size: large;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-link img {
+  margin-right: 10px;
+}
+
+.left-nav,
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav li {
+  margin: 0.5rem;
+}
+
+.left-nav,
+.right-nav-li {
+  margin: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.right-nav-li::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #75baf6;
+  transition: width 0.2s;
+}
+
+.right-nav-li:hover::after {
+  width: 100%;
+}
+
+.link-orange {
+  /* background: radial-gradient(
+    circle at 10% 20%,
+    rgb(253, 203, 50) 0%,
+    rgb(244, 56, 98) 100.2%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #75baf6;
+  /* padding: 0.3rem; */
+  font-weight: 900;
+  margin: 0.3rem;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  font-size: larger;
+}
+
+.cv {
+  background-color: #75baf6;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 50%;
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+.cv:hover {
+  transform: scale(1.5) rotate(360deg);
+}
+.about h1 {
+  font-size: 3rem;
+}
+.pronouns {
+  font-size: 1.2rem;
+  color: rgb(118, 118, 118);
+}
+.profile {
+  width: 55%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+}
+.left-about {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 7rem;
+}
+.right-about {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.social-links a {
+  margin: 1rem;
+  transition: transform 0.3s ease, color 0.2s ease;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.social-links a:hover {
+  backdrop-filter: blur(0.5rem);
+
+  transform: scale(1.2) rotate(360deg);
+}
+.FaGithub:hover {
+  color: #fff;
+}
+.FaLinkedIn:hover {
+  color: #0a66c2;
+}
+.FaHashnode:hover {
+  color: #2962ff;
+}
+.SiGmail:hover {
+  color: #d93025;
+}
+.FaDiscord:hover {
+  color: #5c6aff;
+}
+.social-links a:active {
+  color: #76715f;
+}
+
+.project-head {
+  display: flex;
+  justify-content: center;
+  margin-left: 7rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+}
+.project-cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+.project-head::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #75baf6;
+  transition: width 0.2s;
+}
+.project-head:hover::after {
+  width: 100%;
+}
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 2rem; /* Adjust the gap between cards as needed */
+  justify-content: center; /* Center the grid items horizontally */
+  margin-top: 2rem;
+  margin-left: auto; /* Center the grid container */
+  margin-right: auto; /* Center the grid container */
+  width: fit-content; /* Fit the width to the content to help with centering */
+}
+
+.cards-1,
+.cards-2 {
+  margin-top: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* Add some margin to separate it from the cards */
+}
+
+.button-container .button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #000;
+  color: white;
+  border: 1px solid #aeaeae;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, background-color 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.skills {
+  margin: 3rem 0;
+}
+
+.skills-head {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-left: 7rem;
+
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+}
+.skills-head::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #75baf6;
+  transition: width 0.2s;
+}
+.skills-head:hover::after {
+  width: 100%;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.skills-category {
+  width: 30%; /* Adjust as needed for layout */
+  margin-bottom: 2rem;
+}
+
+.skills-category h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-tag {
+  background-color: #75baf6;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.skill-tag:hover {
+  background-color: #75baf6;
+  transform: scale(1.1);
+}
