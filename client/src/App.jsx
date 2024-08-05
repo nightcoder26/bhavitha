@@ -123,6 +123,7 @@ const App = () => {
                   "MongoDB",
                   "Express",
                 ]}
+                link1={""}
               />
               <Card
                 image={card3}
