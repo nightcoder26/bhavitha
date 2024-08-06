@@ -8,5 +8,5 @@ export default defineConfig({
     host: "0.0.0.0", // Allows access from local network
     port: 80, // Use port 80
   },
-  base: "/bhavitha/",
+  base: "/",
 });
