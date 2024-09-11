@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
 
 import "./App.css";
-import logo from "./images/logo.jpg";
+
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import card1 from "./images/card1.png";
 import { FaHashnode } from "react-icons/fa6";
@@ -14,6 +14,7 @@ import Card from "./Card";
 import card4 from "./images/card4.png";
 import { SiGmail } from "react-icons/si";
 import GitHubCalendar from "react-github-calendar";
+import ImageRotate from "./ImageRotate.jsx";
 
 const App = () => {
   const [showNav, setShowNav] = useState(true);
@@ -124,7 +125,7 @@ const App = () => {
               </div>
             </div>
             <div className="right-about">
-              <img src={logo} alt="logo" className="profile" />
+              <ImageRotate />
             </div>
           </div>
           <div className="projects" id="Projects">

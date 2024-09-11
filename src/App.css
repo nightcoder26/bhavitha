@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 10px; /* Width of the scrollbar */
 }
 
 /* Scrollbar track (part the scrollbar moves along) */
@@ -34,7 +34,7 @@ html {
 .nav {
   width: 50%;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 1.3rem;
   border-radius: 15px;
   backdrop-filter: blur(1.5rem);
   background: linear-gradient(
@@ -414,12 +414,7 @@ nav ul {
 */
 /* Base styles for smaller screens (mobile) */
 @media (max-width: 768px) {
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    margin-left: 25rem;
-    width: 100vw;
+  html {
+    zoom: 0.48;
   }
 }
