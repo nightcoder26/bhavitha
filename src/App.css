@@ -415,6 +415,6 @@ nav ul {
 /* Base styles for smaller screens (mobile) */
 @media (max-width: 768px) {
   html {
-    zoom: 0.48;
+    zoom: 0.7;
   }
 }
