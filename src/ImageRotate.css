@@ -1,6 +1,7 @@
 .image-container {
   position: relative;
   display: inline-block;
+  cursor: url("../src/images/cursor.png"), auto;
 }
 
 .profile {
@@ -54,4 +55,10 @@
   border-width: 12px;
   border-style: solid;
   border-color: #000 transparent transparent transparent;
+}
+
+/*adding animations for .profile*/
+.card {
+  border: none;
+  background-color: none !important;
 }

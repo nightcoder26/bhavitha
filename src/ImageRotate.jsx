@@ -11,6 +11,7 @@ import shy from "./images/sadness-shy.png";
 import yt from "./images/sadness-watching-yt.png";
 import yay from "./images/sadness-yay.png";
 import "./ImageRotate.css";
+import Tilt from "react-parallax-tilt";
 
 const ImageRotate = () => {
   const images = [
@@ -40,20 +41,29 @@ const ImageRotate = () => {
     "Yay?",
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const getRandomIndex = () => Math.floor(Math.random() * images.length);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(getRandomIndex);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
+    setCurrentImageIndex(getRandomIndex());
+  }, []);
 
   return (
     <div className="image-container">
-      <img src={images[currentImageIndex]} alt="logo" className="profile" />
-      <div className="tooltip">{tooltips[currentImageIndex]}</div>
+      <Tilt
+        className="card"
+        tiltMaxAngleX={-20}
+        tiltMaxAngleY={-20}
+        perspective={1000}
+        scale={1.02}
+        transitionSpeed={0.000001}
+        glareEnable={false}
+        style={{ background: "none" }}
+      >
+        <img src={images[currentImageIndex]} alt="logo" className="profile" />
+        <div className="tooltip">{tooltips[currentImageIndex]}</div>
+      </Tilt>
     </div>
   );
 };
