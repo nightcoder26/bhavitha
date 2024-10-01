@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -250,6 +250,19 @@ const App = () => {
                 colorScheme="dark"
               ></GitHubCalendar>
             </div>
+            <footer>
+              <div className="footer-div">
+                <p>🫐🦢🪻🐚</p>
+                <p>
+                  Made with{" "}
+                  <span role="img" aria-label="love">
+                    💙
+                  </span>{" "}
+                  by Bhavitha
+                </p>
+                <p>🍇🎧🧿🐚</p>
+              </div>
+            </footer>
           </div>
         </main>
       </div>
