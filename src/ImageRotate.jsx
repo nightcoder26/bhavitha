@@ -11,7 +11,7 @@ import shy from "./images/sadness-shy.png";
 import yt from "./images/sadness-watching-yt.png";
 import yay from "./images/sadness-yay.png";
 import "./ImageRotate.css";
-import Tilt from "react-parallax-tilt";
+// import Tilt from "react-parallax-tilt";
 
 const ImageRotate = () => {
   const images = [
@@ -51,7 +51,7 @@ const ImageRotate = () => {
 
   return (
     <div className="image-container">
-      <Tilt
+      {/* <Tilt
         className="card"
         tiltMaxAngleX={-20}
         tiltMaxAngleY={-20}
@@ -60,10 +60,10 @@ const ImageRotate = () => {
         transitionSpeed={0.000001}
         glareEnable={false}
         style={{ background: "none" }}
-      >
-        <img src={images[currentImageIndex]} alt="logo" className="profile" />
-        <div className="tooltip">{tooltips[currentImageIndex]}</div>
-      </Tilt>
+      > */}
+      <img src={images[currentImageIndex]} alt="logo" className="profile" />
+      <div className="tooltip">{tooltips[currentImageIndex]}</div>
+      {/* </Tilt> */}
     </div>
   );
 };
