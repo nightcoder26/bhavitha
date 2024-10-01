@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
+import PinterestLayout from "./PinterestLayout.jsx";
 import { Link } from "react-router-dom";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
@@ -36,31 +37,31 @@ const App = () => {
 
     styleContributions();
   }, []);
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollTop =
+  //       window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScrollTop <= initialHeight) {
-        // Initial page: Always show the nav bar
-        setShowNav(true);
-      } else {
-        // After initial page: Show/hide nav based on scroll direction
-        if (currentScrollTop > lastScrollTop) {
-          setShowNav(false);
-        } else {
-          setShowNav(true);
-        }
-        setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
-      }
-    };
+  //     if (currentScrollTop <= initialHeight) {
+  //       // Initial page: Always show the nav bar
+  //       setShowNav(true);
+  //     } else {
+  //       // After initial page: Show/hide nav based on scroll direction
+  //       if (currentScrollTop > lastScrollTop) {
+  //         setShowNav(false);
+  //       } else {
+  //         setShowNav(true);
+  //       }
+  //       setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollTop, initialHeight]);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [lastScrollTop, initialHeight]);
 
   return (
     <>
@@ -118,9 +119,10 @@ const App = () => {
                     <strong className="link-orange">Bhavitha 👋</strong>
                   </h1>
                 </div>
-                <p className="text-lg justify-center items-end text-gray-400 mt-4 space-x-2">
-                  Computer Science student at Vellore Institute of Technology
-                  (VIT-AP).
+                <p className="text-lg justify-center items-end text-gray-400 mt-4 space-x-2 py-8">
+                  I'm a Pre-final year Computer Science student <br /> from
+                  India who likes building random stuff. I am <br />
+                  always improving & curious to learn different things.
                 </p>
                 <div className="social-links">
                   <a href="https://github.com/nightcoder26">
@@ -242,7 +244,7 @@ const App = () => {
                 </div>
               </div>
             </div>
-
+            <div className="timeline"></div>
             <div className="github-graph">
               <h1 className="mb-8 pt-8 text-center">Recent Activity</h1>
               <GitHubCalendar
@@ -251,6 +253,13 @@ const App = () => {
               ></GitHubCalendar>
             </div>
             <footer>
+              <div className="some-stuff">
+                <h1 className=" text-center ">Some Stuff</h1>
+              </div>
+
+              <div className="pins">
+                <PinterestLayout />
+              </div>
               <div className="footer-div">
                 <p>🫐🦢🪻🐚</p>
                 <p>

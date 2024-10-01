@@ -432,3 +432,45 @@ nav ul {
   /* border: #0a66c2 1px solid; */
   padding: 1rem;
 }
+
+.pins {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.timeline ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 2rem;
+}
+.some-stuff {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.some-stuff h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+}
+.some-stuff h1::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #75baf6;
+  transition: width 0.2s;
+}
+.some-stuff h1:hover::after {
+  width: 100%;
+}
