@@ -1,22 +1,22 @@
 .card {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(53, 56, 74, 0.5) 0%,
     rgba(15, 15, 24, 0.5) 100%
-  );
+  ); */
   /* background: rgba(15, 15, 24, 0.5) 100%; */
-  border: 2px solid rgba(35, 37, 49, 0.5);
+  border: 0.1px solid rgba(111, 118, 159, 0.5);
   box-sizing: border-box;
   /* backdrop-filter: blur(20px); */
   border-radius: 1rem;
 
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   color: white;
   max-width: 450px;
   margin: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* border: 1px solid rgba(255, 255, 255, 0.2); */
   transition: transform 0.3s;
   min-width: 450px;
 

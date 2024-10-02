@@ -43,19 +43,19 @@ html {
   margin: 0 auto;
   margin-top: 1.3rem;
   border-radius: 15px;
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(24px);
   background: linear-gradient(
     180deg,
     rgba(35, 37, 49, 0.5) 0%,
-    rgba(15, 15, 24, 0.5) 100%
+    rgba(15, 15, 24, 0.5) 20%
   );
   z-index: 100;
   color: white;
-  border: 0.1px solid rgba(35, 37, 49, 0.5);
+  border: 0.1px solid rgba(111, 118, 159, 0.5);
   position: fixed;
   top: 0;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .nav.hidden {
