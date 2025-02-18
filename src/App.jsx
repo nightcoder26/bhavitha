@@ -254,13 +254,13 @@ const App = () => {
               <figure><embed src="https://wakatime.com/share/@f330c801-7c98-4b37-8a28-0dacdec90131/37d30673-b5ba-4fcf-afc3-d64e1029d59e.svg"></embed></figure>
             </div>
             <footer>
-              <div className="some-stuff">
+              {/* <div className="some-stuff">
                 <h1 className=" text-center ">Some Stuff</h1>
               </div>
 
               <div className="pins">
                 <PinterestLayout />
-              </div>
+              </div> */}
               <div className="footer-div">
                 <p>🫐🦢🪻🐚</p>
                 <p>
