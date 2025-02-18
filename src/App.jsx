@@ -247,10 +247,11 @@ const App = () => {
             <div className="timeline"></div>
             <div className="github-graph">
               <h1 className="mb-8 pt-8 text-center">Recent Activity</h1>
-              <GitHubCalendar
+              {/* <GitHubCalendar
                 username="nightcoder26"
                 colorScheme="dark"
-              ></GitHubCalendar>
+              ></GitHubCalendar> */}
+              <figure><embed src="https://wakatime.com/share/@f330c801-7c98-4b37-8a28-0dacdec90131/37d30673-b5ba-4fcf-afc3-d64e1029d59e.svg"></embed></figure>
             </div>
             <footer>
               <div className="some-stuff">
