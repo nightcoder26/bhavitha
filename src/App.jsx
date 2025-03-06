@@ -21,22 +21,22 @@ const App = () => {
   const [showNav, setShowNav] = useState(true);
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [initialHeight, setInitialHeight] = useState(window.innerHeight);
-  useEffect(() => {
-    const styleContributions = () => {
-      const rects = document.querySelectorAll(".github-graph rect");
-      rects.forEach((rect) => {
-        const fill = rect.getAttribute("fill");
-        if (fill == "#39d353") rect.setAttribute("fill", "#3e5be7");
-        if (fill == "#26a641") rect.setAttribute("fill", "#2641a6");
-        if (fill == "#006d32") rect.setAttribute("fill", "#00326d");
-        if (fill == "#0e4429") rect.setAttribute("fill", "#0e2944");
-        if (fill == "#161b22") rect.setAttribute("fill", "#161b22");
-      });
-    };
-    //
+  // useEffect(() => {
+  //   const styleContributions = () => {
+  //     const rects = document.querySelectorAll(".github-graph rect");
+  //     rects.forEach((rect) => {
+  //       const fill = rect.getAttribute("fill");
+  //       if (fill == "#39d353") rect.setAttribute("fill", "#3e5be7");
+  //       if (fill == "#26a641") rect.setAttribute("fill", "#2641a6");
+  //       if (fill == "#006d32") rect.setAttribute("fill", "#00326d");
+  //       if (fill == "#0e4429") rect.setAttribute("fill", "#0e2944");
+  //       if (fill == "#161b22") rect.setAttribute("fill", "#161b22");
+  //     });
+  //   };
+  //   //
 
-    styleContributions();
-  }, []);
+  //   styleContributions();
+  // }, []);
   // useEffect(() => {
   //   const handleScroll = () => {
   //     const currentScrollTop =
@@ -114,9 +114,9 @@ const App = () => {
             <div className="about" id="about">
               <div className="left-about">
                 <div className="flex justify-center items-end space-x-2">
-                  <h1>
+                  <h1 className="hello-text">
                     Hello, I'm{" "}
-                    <strong className="link-orange">Bhavitha 👋</strong>
+                    <strong className="link-orange title-bha">Bhavitha </strong> 👋
                   </h1>
                 </div>
                 <p className="text-lg justify-center items-end text-gray-400 mt-4 space-x-2 py-8">
@@ -147,7 +147,7 @@ const App = () => {
               </div>
             </div>
             <div className="projects" id="Projects">
-              <h2 className="project-head">Projects</h2>
+              <h2 className="project-head head-titles">Projects</h2>
               <div className="project-cards">
                 <Card
                   image={card1}
@@ -209,7 +209,7 @@ const App = () => {
             </div>
 
             <div className="skills" id="skills">
-              <h2 className="skills-head">Skills</h2>
+              <h2 className="skills-head head-titles">Skills</h2>
               <div className="skills-container">
                 <div className="skills-category">
                   <h3>Languages</h3>
@@ -246,7 +246,7 @@ const App = () => {
             </div>
             <div className="timeline"></div>
             <div className="github-graph">
-              <h1 className="mb-8 pt-8 text-center">Recent Activity</h1>
+              <h1 className="mb-8 pt-8 text-center head-titles">Recent Activity</h1>
               {/* <GitHubCalendar
                 username="nightcoder26"
                 colorScheme="dark"

@@ -8,6 +8,16 @@ body {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
   color: white;
 }
+@font-face {
+  font-family: 'Mark Pro Heavy';
+  src:  url('./fonts/MarkPro-Heavy.woff') format('woff');
+   
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
 html {
   scroll-behavior: smooth; /* Enable smooth scrolling */
   --cursor-color: #fff;
@@ -109,6 +119,40 @@ nav ul {
   color: #75baf6;
 }
 
+.hello-text{
+  font-family: 'Mark Pro Heavy';
+  font-size: 2rem;
+  /* color: #75baf6; */
+}
+
+.title-bha{
+  background: linear-gradient(
+    -45deg,
+    #75baf6,  /* Soft Blue */
+    #4a90e2,  /* Medium Blue */
+    #1e5bbf,  /* Deep Blue */
+    #75baf6   /* Soft Blue */
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .left-nav,
 .right-nav {
   display: flex;
@@ -146,7 +190,7 @@ nav ul {
   /* background: radial-gradient(
     circle at 10% 20%,
     rgb(253, 203, 50) 0%,
-    rgb(244, 56, 98) 100.2%
+    rgb(244, 56, 98) 100.2%0
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
