@@ -12,14 +12,12 @@ import "./ImageRotate.css";
 
 const ImageRotate = () => {
   const images = [
-    flab,
     peek,
     book,
     yt,
     yay,
   ];
   const tooltips = [
-    "..",
     "Lost thoughts",
     "read !#$!$^@#5",
     "Chronically online",
