@@ -95,7 +95,7 @@ const App = () => {
                     <p className="link-orange">
                       <FaHeart />
                     </p>
-                    <p>bhavitha.</p>
+                    <p>bhavitha</p>
                   </a>
                 </li>
               </div>
