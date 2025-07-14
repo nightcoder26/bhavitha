@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaHeart } from "react-icons/fa";
-import PinterestLayout from "./PinterestLayout.jsx";
+// import PinterestLayout from "./PinterestLayout.jsx";
 import { Link } from "react-router-dom";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
@@ -9,13 +9,19 @@ import card1 from "./images/card1.png";
 import { FaHashnode } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
+import { Typewriter } from 'react-simple-typewriter';
 import card2 from "./images/card2.png";
 import card3 from "./images/card3.png";
+import RVA from "./images/RVA.png";
 import Card from "./Card";
 import card4 from "./images/card4.png";
+import ExperienceCard from "./ExperienceCard.jsx";
 import { SiGmail } from "react-icons/si";
 import GitHubCalendar from "react-github-calendar";
+import vit from "./images/VIT-WHITE.png";
+import chaitanya from "./images/chaitanya.png";
 import ImageRotate from "./ImageRotate.jsx";
+import MilestoneLogo from "./images/Milestone.svg"
 
 const App = () => {
   const [showNav, setShowNav] = useState(true);
@@ -65,7 +71,7 @@ const App = () => {
 
   return (
     <>
-      <AnimatedCursor
+      {/* <AnimatedCursor
         innerSize={8}
         outerSize={35}
         innerScale={1}
@@ -78,7 +84,7 @@ const App = () => {
         outerStyle={{
           border: "3px solid var(--cursor-color-2)",
         }}
-      />
+      /> */}
       <div className="main-container">
         <nav className={`nav ${showNav ? "visible" : "hidden"}`}>
           <ul>
@@ -89,22 +95,25 @@ const App = () => {
                     <p className="link-orange">
                       <FaHeart />
                     </p>
-                    <p>Bhavitha</p>
+                    <p>bhavitha.</p>
                   </a>
                 </li>
               </div>
               <div className="right-nav">
                 <li className="right-nav-li">
-                  <a href="#Projects">Projects</a>
+                  <a href="#Projects">projects</a>
                 </li>
                 <li className="right-nav-li">
-                  <a href="#skills">Skills</a>
+                  <a href="#skills">skills</a>
                 </li>
-                <li className="cv">
+                <li className="right-nav-li">
+                  <a href="#experience">experience</a>
+                </li>
+                {/* <li className="cv">
                   <a href="">
-                    <MdOutlineFileDownload />
+                    
                   </a>
-                </li>
+                </li> */}
               </div>
             </div>
           </ul>
@@ -116,13 +125,24 @@ const App = () => {
                 <div className="flex justify-center items-end space-x-2">
                   <h1 className="hello-text">
                     Hello, I'm{" "}
-                    <strong className="link-orange title-bha">Bhavitha </strong> 👋
+                    <strong className="link-orange title-bha">
+                      <Typewriter
+                        words={['Bhavitha', 'భవిత', 'भविता',]}
+                        loop={true}
+                        cursor
+                        cursorStyle="|"
+                        typeSpeed={100}
+                        deleteSpeed={100}
+                        delaySpeed={500}
+                      />
+                    </strong>{" "}
+                    👋
                   </h1>
                 </div>
-                <p className="text-lg justify-center items-end text-gray-400 mt-4 space-x-2 py-8">
-                  I'm a Pre-final year Computer Science student <br /> from
-                  India who likes building random stuff. I am <br />
-                  always improving & curious to learn different things.
+                <p className="text-xxl-lg justify-center items-end text-gray-400 mt-4 space-x-2 py-8">
+                  I'm a Computer Science and I like building things, learning<br />
+                  new tech stacks, and hanging around online communities. <br />
+                  Welcome to my little 🤏 corner on the internet.
                 </p>
                 <div className="social-links">
                   <a href="https://github.com/nightcoder26">
@@ -146,6 +166,7 @@ const App = () => {
                 <ImageRotate />
               </div>
             </div>
+
             <div className="projects" id="Projects">
               <h2 className="project-head head-titles">Projects</h2>
               <div className="project-cards">
@@ -160,7 +181,8 @@ const App = () => {
                     "MongoDB",
                     "Express",
                   ]}
-                  link1={""}
+                  link1={"https://github.com/nightcoder26/Fin-Z"}
+                  link2={""}
                 />
                 <Card
                   image={card3}
@@ -172,6 +194,8 @@ const App = () => {
                     "Firebase",
                     "Node.js",
                   ]}
+                  link1={"https://github.com/nightcoder26/MEDICINE_DISPENSER"}
+                  link2={"https://medicine-dispenser.vercel.app/"}
                 />
                 <Card
                   image={card2}
@@ -184,6 +208,8 @@ const App = () => {
                     "Express",
                     "MongoDB",
                   ]}
+                  link1={"https://github.com/nightcoder26/Drive2Destiny"}
+                  link2={"https://nightcoder26.github.io/Drive2Destiny/"}
                 />
                 <Card
                   image={card4}
@@ -196,6 +222,8 @@ const App = () => {
                     "Express",
                     "MongoDB",
                   ]}
+                  link1={"https://github.com/nightcoder26/better_care"}
+                  link2={"https://better-care-tau.vercel.app/"}
                 />
               </div>
               <div className="button-container">
@@ -243,6 +271,57 @@ const App = () => {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div className="exp-edu" id="experience">
+              <div className="education">
+                <h2 className=" exp-titles">Experience</h2>
+                <div>
+                  <div >
+                    <ExperienceCard
+                      company={"RVA"}
+                      role={"Web Developer"}
+                      startDate={"AUG, 2024"}
+                      endDate={"OCT, 2024"}
+                      // description={"Worked as a Web Developer for a freelance client. Collaborated with a client to enhance a React-based CRM & internal tools by resolving UI bugs and improving usability Refactored a single-component front-end into 20+ modular, reusable React components to improve maintainability Implemented validation logic across 5 user flows to ensure complete user inputs across multiple user interfaces"}
+                      description={"Refactored single component front-end and enhance a React-based CRM & internal tools by resolving UI bugs and improving validation logic"}
+                      logo={RVA}
+                    />
+                    <ExperienceCard
+                      company="Milestone Club - VIT-AP"
+                      role="Club Manager"
+                      startDate="FEB, 2023"
+                      endDate="SEP, 2024"
+                      description="As Manager, I led multiple teams to develop projects, conducted weekly code reviews, interviews for recruitment and teaching sessions"
+                      logo={MilestoneLogo}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="exp-titles ">Education</h2>
+                <div>
+                  <div >
+                    <ExperienceCard
+                      company={"Vellore Institute of Technology - AP"}
+                      role={"B.Tech, Computer Science Engineering with Business Systems"}
+                      startDate={"OCT, 2022"}
+                      endDate={"PRESENT"}
+                      // description={"Worked as a Web Developer for a freelance client. Collaborated with a client to enhance a React-based CRM & internal tools by resolving UI bugs and improving usability Refactored a single-component front-end into 20+ modular, reusable React components to improve maintainability Implemented validation logic across 5 user flows to ensure complete user inputs across multiple user interfaces"}
+                      description={`CGPA: 9.04/10\n Coursework: DSA, DBMS, OS, CN, Financial Management, Operations Research, Business Strategy`}
+                      logo={vit}
+                    />
+                    <ExperienceCard
+                      company="Sri Chaitanya Junior College"
+                      role="Intermediate, MPC"
+                      startDate="MAY, 2020"
+                      endDate="MARCH, 2022"
+                      description={`Grade: 975/1000\nSubjects: Mathematics, Physics, Chemistry`}
+                      logo={chaitanya}
+                    />
+                  </div>
+                </div>
+              </div>
+
             </div>
             <div className="timeline"></div>
             <div className="github-graph">

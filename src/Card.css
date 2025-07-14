@@ -14,14 +14,15 @@
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   color: white;
-  max-width: 450px;
+  max-width: 500px;
   margin: 20px;
   /* border: 1px solid rgba(255, 255, 255, 0.2); */
   transition: transform 0.3s;
   min-width: 450px;
+  font-size: x-large;
 
   min-height: 450px;
-  max-height: 450px;
+  max-height: 500px;
 }
 
 .card-image {
@@ -40,7 +41,7 @@
 }
 
 .card-description {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
