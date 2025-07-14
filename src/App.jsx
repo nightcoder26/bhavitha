@@ -140,8 +140,8 @@ const App = () => {
                   </h1>
                 </div>
                 <p className="text-xxl-lg justify-center items-end text-gray-400 mt-4 space-x-2 py-8">
-                  I'm a Computer Science and I like building things, learning<br />
-                  new tech stacks, and hanging around online communities. <br />
+                  I'm a Computer Science student and I like building things, <br />
+                  learning tech stacks, and hanging around online communities. <br />
                   Welcome to my little 🤏 corner on the internet.
                 </p>
                 <div className="social-links">
