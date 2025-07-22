@@ -69,7 +69,7 @@
 .icon {
   width: 24px;
   height: 24px;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer;
   transition: transform 0.3s;
 }
 

@@ -22,6 +22,7 @@ import vit from "./images/VIT-WHITE.png";
 import chaitanya from "./images/chaitanya.png";
 import ImageRotate from "./ImageRotate.jsx";
 import MilestoneLogo from "./images/Milestone.svg"
+import clickSound from './assets/click.mp3';
 
 const App = () => {
   const [showNav, setShowNav] = useState(true);
@@ -69,6 +70,13 @@ const App = () => {
   //   };
   // }, [lastScrollTop, initialHeight]);
 
+
+  const playClickSound = () => {
+    const audio = new Audio(clickSound);
+    audio.currentTime = 0;
+    audio.play();
+  };
+
   return (
     <>
       {/* <AnimatedCursor
@@ -85,7 +93,7 @@ const App = () => {
           border: "3px solid var(--cursor-color-2)",
         }}
       /> */}
-      <div className="main-container">
+      <div className="main-container" onClick={playClickSound}>
         <nav className={`nav ${showNav ? "visible" : "hidden"}`}>
           <ul>
             <div className="main-nav">
@@ -133,7 +141,7 @@ const App = () => {
                         cursorStyle="|"
                         typeSpeed={100}
                         deleteSpeed={100}
-                        delaySpeed={500}
+                        delaySpeed={1000}
                       />
                     </strong>{" "}
                     👋
@@ -279,11 +287,11 @@ const App = () => {
                   <div >
                     <ExperienceCard
                       company={"RVA"}
-                      role={"Web Developer"}
+                      role={"Web Developer (freelance)"}
                       startDate={"AUG, 2024"}
                       endDate={"OCT, 2024"}
                       // description={"Worked as a Web Developer for a freelance client. Collaborated with a client to enhance a React-based CRM & internal tools by resolving UI bugs and improving usability Refactored a single-component front-end into 20+ modular, reusable React components to improve maintainability Implemented validation logic across 5 user flows to ensure complete user inputs across multiple user interfaces"}
-                      description={"Refactored single component front-end and enhance a React-based CRM & internal tools by resolving UI bugs and improving validation logic"}
+                      description={"Refactored single component front-end and enhanced a React-based CRM & internal tools by resolving UI bugs and improving validation logic"}
                       logo={RVA}
                     />
                     <ExperienceCard
@@ -315,7 +323,7 @@ const App = () => {
                       role="Intermediate, MPC"
                       startDate="MAY, 2020"
                       endDate="MARCH, 2022"
-                      description={`Grade: 975/1000\nSubjects: Mathematics, Physics, Chemistry`}
+                      description={`Grade: 97.5%\nSubjects: Mathematics, Physics, Chemistry`}
                       logo={chaitanya}
                     />
                   </div>

@@ -7,6 +7,10 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
   color: white;
+  cursor: url("./assets/cursor.png"), auto; 
+}
+* {
+  cursor: url('./assets/cursor.png') 0 0, auto;
 }
 @font-face {
   font-family: 'Mark Pro Heavy';
@@ -53,12 +57,8 @@ html {
   margin: 0 auto;
   margin-top: 1.3rem;
   border-radius: 15px;
-  backdrop-filter: blur(24px);
-  background: linear-gradient(
-    180deg,
-    rgba(35, 37, 49, 0.5) 0%,
-    rgba(15, 15, 24, 0.5) 20%
-  );
+  backdrop-filter: blur(104px);
+  background: rgba(42,43,56,.5);
   z-index: 100;
   color: white;
   border: 0.1px solid rgba(111, 118, 159, 0.5);
@@ -128,13 +128,10 @@ nav ul {
 }
 
 .title-bha{
-  background: linear-gradient(
-    -45deg,
-    #75baf6,  /* Soft Blue */
-    #4a90e2,  /* Medium Blue */
-    #1e5bbf,  /* Deep Blue */
-    #75baf6   /* Soft Blue */
-  );
+  background:linear-gradient(-45deg,#6bc5f8,
+  #cf59e6,
+  #6bc5f8,
+  #cf59e6);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -169,7 +166,7 @@ nav ul {
 .right-nav-li {
   margin: 0.5rem;
   position: relative;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
   width: fit-content;
 }
 
@@ -313,7 +310,7 @@ nav ul {
   font-size: 3rem;
   font-weight: 600;
   position: relative;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
   width: fit-content;
 }
 .project-cards {
@@ -364,7 +361,7 @@ nav ul {
   color: white;
   border: 1px solid #aeaeae;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
 
   transition: transform 0.3s ease, background-color 0.2s ease;
 }
@@ -384,7 +381,7 @@ nav ul {
   margin-left: 5rem;
 
   position: relative;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
   width: fit-content;
 }
 
@@ -396,7 +393,7 @@ nav ul {
   /* margin-left: 5rem; */
 
   position: relative;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
   width: fit-content;
 }
 
@@ -407,7 +404,7 @@ nav ul {
   margin-left: 5rem;
 
   position: relative;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
   width: fit-content;
 }
 .head-titles::after {
@@ -471,7 +468,7 @@ nav ul {
   border-radius: 0.3rem;
   font-size: 1rem;
   transition: transform 0.3s ease, background-color 0.2s ease;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
 }
 
 .skill-tag:hover {
@@ -490,7 +487,7 @@ nav ul {
   font-weight: 500;
 
   position: relative;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
   width: fit-content;
 }
 .github-graph h1::after {
@@ -560,7 +557,7 @@ nav ul {
   font-size: 2rem;
   font-weight: 500;
   position: relative;
-  cursor: pointer;
+  cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
   width: fit-content;
 }
 .some-stuff h1::after {
