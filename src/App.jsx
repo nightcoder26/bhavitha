@@ -190,7 +190,7 @@ const App = () => {
                     "Express",
                   ]}
                   link1={"https://github.com/nightcoder26/Fin-Z"}
-                  link2={""}
+                  link2={"https://fin-z-app.vercel.app/"}
                 />
                 <Card
                   image={card3}
