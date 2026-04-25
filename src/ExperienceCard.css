@@ -3,7 +3,7 @@
   color: #ccc;
   padding: 24px;
   border-radius: 12px;
-  max-width: 600px;
+  max-width: 900px;
   font-size: large;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
   /* font-family: Arial, sans-serif; */
@@ -65,17 +65,4 @@
   justify-content: center;
   width: 6rem;
   height: 6rem;
-}
-
-
-
-.logo-container::after {
-  content: '';
-  position: absolute;
-  top: 100%; /* start at bottom of logo */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 10rem; /* adjust as needed */
-  background-color: #36363a; /* subtle vertical line */
 }

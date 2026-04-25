@@ -128,10 +128,10 @@ nav ul {
 }
 
 .title-bha{
-  background:linear-gradient(-45deg,#6bc5f8,
-  #cf59e6,
-  #6bc5f8,
-  #cf59e6);
+  background:linear-gradient(-45deg,#3b82f6,
+  #1e40af,
+  #0369a1,
+  #3b82f6);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -202,6 +202,11 @@ nav ul {
   font-weight: 700;
   padding-bottom: 1px;
   margin: 3px;
+}
+
+.amazon-orange:hover{
+  color: #FF6200;
+  font-weight: 700;
 }
 
 .about {
@@ -290,15 +295,21 @@ nav ul {
 }
 .exp-edu{
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  /* margin-left: 2rem; */
-
-  
-
-
-
-
+  margin-left: 15rem;
+  margin-right: 15rem;
 }
+
+.exp-edu-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 15rem;
+  margin-right: 15rem;
+  gap: 2rem;
+}
+
 /* 
 .education{
   margin-left: 5rem;
@@ -306,7 +317,7 @@ nav ul {
 .project-head {
   display: flex;
   justify-content: center;
-  margin-left: 7rem;
+  margin-left: 15rem;
   font-size: 3rem;
   font-weight: 600;
   position: relative;
@@ -338,8 +349,8 @@ nav ul {
   gap: 2rem; /* Adjust the gap between cards as needed */
   justify-content: center; /* Center the grid items horizontally */
   margin-top: 2rem;
-  margin-left: auto; /* Center the grid container */
-  margin-right: auto; /* Center the grid container */
+  margin-left: 15rem; /* Left margin */
+  margin-right: 15rem; /* Right margin */
   width: fit-content; /* Fit the width to the content to help with centering */
 }
 
@@ -371,14 +382,13 @@ nav ul {
 }
 
 .skills {
-  margin: 3rem 0;
+  margin: 3rem 15rem;
 }
 .head-titles
 {
   
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
-  margin-left: 5rem;
 
   position: relative;
   cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
@@ -401,7 +411,7 @@ nav ul {
 .skills-head {
   /* font-size: 2rem; */
   font-weight: 500;
-  margin-left: 5rem;
+  margin-left: 0rem;
 
   position: relative;
   cursor: url("./assets/cursor2.png"), pointer; /* Custom cursor */
@@ -436,15 +446,15 @@ nav ul {
 }
 
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin-top: 2rem;
-  margin-left: 5rem;
+  margin-left: 0;
 }
 
 .skills-category {
-  width: 30%; /* Adjust as needed for layout */
+  width: 100%; /* Fill the grid cell */
   margin-bottom: 2rem;
 }
 
@@ -572,4 +582,191 @@ nav ul {
 }
 .some-stuff h1:hover::after {
   width: 100%;
+}
+
+.personal-interests {
+  margin: 4rem 15rem;
+  padding: 3rem 0;
+}
+
+.other-stuff-line {
+  margin: 1rem 15rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.other-stuff-line p {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.other-stuff-line a {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: #75baf6;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.other-stuff-line a:hover {
+  color: white;
+  text-decoration-color: #75baf6;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.interest-main {
+  border: 0.1px solid rgba(111, 118, 159, 0.5);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.interest-main:hover {
+  transform: scale(1.02);
+}
+
+.interest-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.interest-subtitle {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Books Grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.book-card {
+  border: 0.1px solid rgba(111, 118, 159, 0.5);
+  border-radius: 1rem;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  color: white;
+  transition: transform 0.3s;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.book-cover-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+}
+
+.book-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #75baf6;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.book-author {
+  color: #9ca3af;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.book-rating {
+  color: #fbbf24;
+  font-size: 0.85rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.view-more-link {
+  color: #75baf6;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+.view-more-link:hover {
+  color: #93c5fd;
+  transform: translateX(4px);
+}
+
+.interest-button {
+  background: #75baf6;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.interest-button:hover {
+  background: #93c5fd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(117, 186, 246, 0.4);
+}
+
+/* Pinterest Widget Styling */
+.personal-interests iframe {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .personal-interests {
+    margin: 4rem 10rem;
+  }
+  
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .personal-interests {
+    margin: 4rem 2rem;
+  }
+  
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
 }

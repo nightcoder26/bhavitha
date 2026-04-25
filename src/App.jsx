@@ -5,11 +5,14 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import AnimatedCursor from "react-animated-cursor";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import card1 from "./images/card1.png";
 import { FaHashnode } from "react-icons/fa6";
 import { FaDiscord } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { Typewriter } from 'react-simple-typewriter';
+import AmazonLogo from "./images/Amazon_Logo_1.jpg";
+import uddeshya from "./images/UDDESHYA.jpg";
 import card2 from "./images/card2.png";
 import card3 from "./images/card3.png";
 import RVA from "./images/RVA.png";
@@ -148,8 +151,8 @@ const App = () => {
                   </h1>
                 </div>
                 <p className="text-xxl-lg justify-center items-end text-gray-400 mt-4 space-x-2 py-8">
-                  I'm a Computer Science student and I like building things, <br />
-                  learning tech stacks, and hanging around online communities. <br />
+                  I'm a Computer Science student and  SDE Intern <span className="amazon-orange">@Amazon</span> <br />
+                  I like building applications, exploring new tech, and being too online.<br />
                   Welcome to my little 🤏 corner on the internet.
                 </p>
                 <div className="social-links">
@@ -165,6 +168,9 @@ const App = () => {
                   <a href="https://bhavitha.hashnode.dev/">
                     <FaHashnode className="FaHashnode" />
                   </a>
+                  <a href="https://x.com/night_coder26">
+                    <FaXTwitter className="FaXTwitter" />
+                  </a>
                   <a>
                     <FaDiscord className="FaDiscord" />
                   </a>
@@ -172,6 +178,24 @@ const App = () => {
               </div>
               <div className="right-about">
                 <ImageRotate />
+              </div>
+            </div>
+
+            <div className="exp-edu" id="experience">
+              <div className="education">
+                <h2 className=" exp-titles">Experience</h2>
+                <div>
+                  <div >
+                    <ExperienceCard
+                      company={"Amazon"}
+                      role={"Software Development Engineer Intern"}
+                      startDate={"JAN, 2026"}
+                      endDate={"PRESENT"}
+                      description={"Worked on backend systems that process and validate address data. Developed event-driven pipelines and APIs to handle distributed data across multiple services."}
+                      logo={AmazonLogo}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -250,61 +274,51 @@ const App = () => {
                 <div className="skills-category">
                   <h3>Languages</h3>
                   <ul className="skills-list">
+                    <li className="skill-tag">Java</li>
                     <li className="skill-tag">C</li>
                     <li className="skill-tag">C++</li>
-                    <li className="skill-tag">HTML/CSS</li>
                     <li className="skill-tag">JavaScript</li>
-
                     <li className="skill-tag">SQL</li>
-                    <li className="skill-tag">Java</li>
                   </ul>
                 </div>
                 <div className="skills-category">
-                  <h3>Technologies/Frameworks</h3>
+                  <h3>Frontend</h3>
                   <ul className="skills-list">
                     <li className="skill-tag">React.js</li>
-                    <li className="skill-tag">Node.js</li>
                     <li className="skill-tag">Redux</li>
                     <li className="skill-tag">Tailwind CSS</li>
                     <li className="skill-tag">Sass</li>
-                    <li className="skill-tag">Qt6</li>
-                    <li className="skill-tag">MongoDB</li>
+                    <li className="skill-tag">HTML/CSS</li>
                   </ul>
                 </div>
                 <div className="skills-category">
-                  <h3>Developer Tools</h3>
+                  <h3>Backend & Systems</h3>
                   <ul className="skills-list">
+                    <li className="skill-tag">Node.js</li>
+                    <li className="skill-tag">REST APIs</li>
+                    <li className="skill-tag">Springboot</li>
+                  </ul>
+                </div>
+                <div className="skills-category">
+                  <h3>Databases</h3>
+                  <ul className="skills-list">
+                    <li className="skill-tag">MongoDB</li>
+                    <li className="skill-tag">DynamoDB</li>
+                    <li className="skill-tag">AWS Neptune</li>
+                  </ul>
+                </div>
+                <div className="skills-category">
+                  <h3>Others</h3>
+                  <ul className="skills-list">
+                    <li className="skill-tag">AWS Cloud</li>
+                    <li className="skill-tag">Docker</li>
                     <li className="skill-tag">Git & Github</li>
                     <li className="skill-tag">Postman</li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="exp-edu" id="experience">
-              <div className="education">
-                <h2 className=" exp-titles">Experience</h2>
-                <div>
-                  <div >
-                    <ExperienceCard
-                      company={"RVA"}
-                      role={"Web Developer (freelance)"}
-                      startDate={"AUG, 2024"}
-                      endDate={"OCT, 2024"}
-                      // description={"Worked as a Web Developer for a freelance client. Collaborated with a client to enhance a React-based CRM & internal tools by resolving UI bugs and improving usability Refactored a single-component front-end into 20+ modular, reusable React components to improve maintainability Implemented validation logic across 5 user flows to ensure complete user inputs across multiple user interfaces"}
-                      description={"Refactored single component front-end and enhanced a React-based CRM & internal tools by resolving UI bugs and improving validation logic"}
-                      logo={RVA}
-                    />
-                    <ExperienceCard
-                      company="Milestone Club - VIT-AP"
-                      role="Club Manager"
-                      startDate="FEB, 2023"
-                      endDate="SEP, 2024"
-                      description="As Manager, I led multiple teams to develop projects, conducted weekly code reviews, interviews for recruitment and teaching sessions"
-                      logo={MilestoneLogo}
-                    />
-                  </div>
-                </div>
-              </div>
+            <div className="exp-edu-row" id="education-volunteering">
               <div>
                 <h2 className="exp-titles ">Education</h2>
                 <div>
@@ -314,8 +328,7 @@ const App = () => {
                       role={"B.Tech, Computer Science Engineering with Business Systems"}
                       startDate={"OCT, 2022"}
                       endDate={"PRESENT"}
-                      // description={"Worked as a Web Developer for a freelance client. Collaborated with a client to enhance a React-based CRM & internal tools by resolving UI bugs and improving usability Refactored a single-component front-end into 20+ modular, reusable React components to improve maintainability Implemented validation logic across 5 user flows to ensure complete user inputs across multiple user interfaces"}
-                      description={`CGPA: 9.04/10\n Coursework: DSA, DBMS, OS, CN, Financial Management, Operations Research, Business Strategy`}
+                      description={`CGPA: 9.04/10\n CS Coursework: Object-Oriented Programming, Data Structures and Algorithms, Database Management Systems, Operating Systems, Computer Networks, Machine Learning\n Business Coursework: Financial Management, Accounting, Economics, Marketing Research, Operations Research, Business Strategy`}
                       logo={vit}
                     />
                     <ExperienceCard
@@ -329,17 +342,57 @@ const App = () => {
                   </div>
                 </div>
               </div>
+              <div>
+                <h2 className="exp-titles ">Volunteering</h2>
+                <div>
+                  <div >
+                    <ExperienceCard
+                      company={"RVA"}
+                      role={"Web Developer (freelance)"}
+                      startDate={"AUG, 2024"}
+                      endDate={"OCT, 2024"}
+                      description={"Refactored single component front-end and enhanced a React-based CRM & internal tools by resolving UI bugs and improving validation logic"}
+                      logo={RVA}
+                    />
+                    <ExperienceCard
+                      company="Uddeshya Club - VIT-AP"
+                      role="President"
+                      startDate="JAN, 2024"
+                      endDate="JUN, 2024"
+                      description="Organized donation events and fundraising initiatives for orphanages and underprivileged communities."
+                      logo={uddeshya}
+                    />
+                    <ExperienceCard
+                      company="Milestone Club - VIT-AP"
+                      role="Technical Lead"
+                      startDate="FEB, 2023"
+                      endDate="SEP, 2024"
+                      description="Led multiple teams to develop projects, conducted weekly code reviews, interviews for recruitment and teaching sessions"
+                      logo={MilestoneLogo}
+                    />
+                  </div>
+                </div>
+              </div>
 
             </div>
-            <div className="timeline"></div>
             <div className="github-graph">
-              <h1 className="mb-8 pt-8 text-center head-titles">Recent Activity</h1>
+              <h1 className="mb-2 pt-8 text-center head-titles">Recent Activity</h1>
+              <p className="text-center text-gray-400 text-sm mb-4">Powered by WakaTime</p>
               {/* <GitHubCalendar
                 username="nightcoder26"
                 colorScheme="dark"
               ></GitHubCalendar> */}
               <figure><embed src="https://wakatime.com/share/@f330c801-7c98-4b37-8a28-0dacdec90131/37d30673-b5ba-4fcf-afc3-d64e1029d59e.svg"></embed></figure>
             </div>
+
+            <div className="other-stuff-line">
+              <p>I like to read books, listen to music and scroll pinterest in my freetime. also a huge fan of superhero movies</p>
+            </div>
+
+            <div className="other-stuff-line">
+              <p>Find me here: <a href="https://app.thestorygraph.com/profile/bored_af" target="_blank" rel="noopener noreferrer">storygraph</a> • <a href="https://open.spotify.com/user/313ywh4k2rhhntr2oksma7hbom5u?si=2c867daee7584411" target="_blank" rel="noopener noreferrer">spotify</a> • <a href="https://pin.it/35Ru9o9gr" target="_blank" rel="noopener noreferrer">pinterest</a></p>
+            </div>
+
             <footer>
               {/* <div className="some-stuff">
                 <h1 className=" text-center ">Some Stuff</h1>
